@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ScoreIndicator: View {
-    var score: Score
+    var score: Int
     var width = UIScreen.main.bounds.size.width
     var height = UIScreen.main.bounds.size.height
     
@@ -20,13 +20,13 @@ struct ScoreIndicator: View {
                 .foregroundColor(Color(red: 1, green: 30/255, blue: 60/255))
             
             Circle()
-                .trim(from: 0.0, to: CGFloat(min(CGFloat(score.correctAnswers) &/ CGFloat(15), 1.0)))
+                .trim(from: 0.0, to: CGFloat(min(CGFloat(score) &/ CGFloat(15), 1.0)))
                 .stroke(style: StrokeStyle(lineWidth: 20.0, lineCap: .round, lineJoin: .round))
                 .foregroundColor(Color(red: 1, green: 30/255, blue: 60/255))
                 .rotationEffect(Angle(degrees: 270.0))
                 .animation(.linear)
             
-            Text("\(score.correctAnswers)/15")
+            Text("\(score)/15")
                 .modifier(PoppinsFont(.medium, size: 28))
                 .foregroundColor(Color(red: 1, green: 30/255, blue: 60/255))
                 .multilineTextAlignment(.leading)

@@ -9,8 +9,8 @@ import SwiftUI
 
 extension Color {
     static var random: Color {
-        return Color(red: .random(in: 0...0.8),
-                     green: .random(in: 0...0.8),
-                     blue: .random(in: 0...0.8))
+        return Color(red: .random(in: 0.2...0.7),
+                     green: .random(in: 0.2...0.7),
+                     blue: .random(in: 0.2...0.7))
     }
 }

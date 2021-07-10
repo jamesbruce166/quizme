@@ -10,15 +10,16 @@ import SwiftUI
 struct CategoryDetail: View {
     var width = UIScreen.main.bounds.size.width
     var height = UIScreen.main.bounds.size.height
-    
     var selectedCategory: Category
-
-    @StateObject var score = Score()
-    @Environment(\.presentationMode) var presentationMode
+    
+    @StateObject var network = NetworkMonitor()
     @StateObject private var viewModel = CategoryViewModel()
+    
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ZStack {
+            Color.white.ignoresSafeArea()
             VStack {
                 ZStack {
                     Rectangle()
@@ -63,11 +64,17 @@ struct CategoryDetail: View {
                 .padding([.leading, .top], 15)
                 VStack (spacing: 20) {
                     Button(action: {
-                        viewModel.startNormalMode(categoryID: selectedCategory.id)
+                        viewModel.startRound(categoryID: selectedCategory.id)
+                        viewModel.isNormalMode = true
                     }) {
                         GameModeButton(icon: "star.circle.fill", title: "Normal Mode", info: "15 questions with mixed difficulty.")
                     }
-                    GameModeButton(icon: "clock.arrow.circlepath", title: "Quick Fire - 10", info: "10 questions, but be quick!")
+                    Button(action: {
+                        viewModel.startRound(categoryID: selectedCategory.id)
+                        viewModel.isNormalMode = false
+                    }) {
+                        GameModeButton(icon: "clock.arrow.circlepath", title: "Quick Fire", info: "15 questions, but be quick!")
+                    }
                 }
                 .padding(.top, 10)
                 
@@ -81,7 +88,7 @@ struct CategoryDetail: View {
                     Spacer()
                 }
                 .padding([.leading, .top], 15)
-                ScoreIndicator(score: score)
+                ScoreIndicator(score: viewModel.score)
                 
                 Spacer()
             }
@@ -90,15 +97,14 @@ struct CategoryDetail: View {
             viewModel.loadCategoryInfo(categoryID: selectedCategory.id)
         }
         .fullScreenCover(item: $viewModel.questionRequest) {
-            Game(questions: $0, score: score)
+            Game(questions: $0, isNormalMode: viewModel.isNormalMode, score: $viewModel.score)
         }
     }
-    
-
 }
 
 struct CategoryDetail_Previews: PreviewProvider {
     static var previews: some View {
         CategoryDetail(selectedCategory: .init(id: 13, name: "Name"))
+            .preferredColorScheme(.dark)
     }
 }

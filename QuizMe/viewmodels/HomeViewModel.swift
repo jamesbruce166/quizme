@@ -10,6 +10,7 @@ import SwiftUI
 final class HomeViewModel: ObservableObject {
     @Published var categories: CategoryGroup?
     @Published var shouldShowDetailView = false
+    @Published var shouldShowInfo = false
     @Published var selectedCategory: Category?
     
     func getCategories() {

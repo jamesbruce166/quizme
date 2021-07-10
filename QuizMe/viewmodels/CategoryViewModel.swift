@@ -12,7 +12,9 @@ final class CategoryViewModel: ObservableObject {
     @Published var questionRequest: QuestionRequest?
     @Published var totalQuestions: Int = 0
     @Published var pendingQuestions: Int = 0
-    
+    @Published var score: Int = 0
+    @Published var isNormalMode = true
+
     func loadCategoryInfo(categoryID: Int) {
         Api().getCategoryInfo { result in
             switch result {
@@ -29,7 +31,7 @@ final class CategoryViewModel: ObservableObject {
         }
     }
     
-    func startNormalMode(categoryID: Int) {
+    func startRound(categoryID: Int) {
         Api().getQuestions(categoryId: categoryID, numOfQuestions: 15) { result in
             switch result {
             case .success(let data):

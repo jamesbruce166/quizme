@@ -13,16 +13,20 @@ final class GameViewModel: ObservableObject {
     @Published var disabled = false
     @Published var showAnswers = false
     @Published var alertItem: AlertItem?
+    @Published var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @Published var timeRemaining = 30
     
-    func answerPressed(answer: String, results: [Question], score: Score) {
+    func countdown() {
+        if timeRemaining > 0 {
+            timeRemaining -= 1
+        } else {
+            alertItem = AlertContext.TimeOut
+        }
+    }
+    
+    func answerPressed(answer: String, results: [Question]) {
         self.disabled.toggle()
         self.showAnswers.toggle()
-        
-        if answerWasCorrect(answer: answer, results: results) {
-            registerCorrectAnswer(score: score)
-        } else {
-            registerIncorrectAnswer(score: score)
-        }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.nextQuestion(results: results)
@@ -45,14 +49,6 @@ final class GameViewModel: ObservableObject {
             return true
         }
         return false
-    }
-    
-    func registerCorrectAnswer(score: Score) {
-        score.correctAnswers += 1
-    }
-    
-    func registerIncorrectAnswer(score: Score) {
-        score.incorrectAnswers += 1
     }
     
     func roundOver() {

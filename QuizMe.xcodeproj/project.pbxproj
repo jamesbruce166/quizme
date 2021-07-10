@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E16E7492693133B0041272C /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E16E7482693133B0041272C /* NetworkMonitor.swift */; };
+		7E16E7CF2694F6CE0041272C /* Colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E16E7CE2694F6CE0041272C /* Colours.xcassets */; };
 		7EA13C6F2691D6BC005872DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA13C6E2691D6BC005872DF /* AppDelegate.swift */; };
 		7EA13C712691D6BC005872DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA13C702691D6BC005872DF /* SceneDelegate.swift */; };
 		7EA13C752691D6BD005872DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA13C742691D6BD005872DF /* Assets.xcassets */; };
@@ -32,7 +34,6 @@
 		7EA13CD12691DEB0005872DF /* String+getAcronyms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA13CD02691DEB0005872DF /* String+getAcronyms.swift */; };
 		7EA13CD42691DFF7005872DF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA13CD32691DFF7005872DF /* Question.swift */; };
 		7EA13CD62691E0BC005872DF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA13CD52691E0BC005872DF /* Category.swift */; };
-		7EA13CD82691E11A005872DF /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA13CD72691E11A005872DF /* Score.swift */; };
 		7EA13CDA2691E3E0005872DF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA13CD92691E3E0005872DF /* API.swift */; };
 		7EA13CDC2691E460005872DF /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA13CDB2691E460005872DF /* Routes.swift */; };
 		7EA13CDE2691F354005872DF /* CategoryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA13CDD2691F354005872DF /* CategoryDetail.swift */; };
@@ -69,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E16E7482693133B0041272C /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		7E16E7CE2694F6CE0041272C /* Colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colours.xcassets; sourceTree = "<group>"; };
 		7EA13C6B2691D6BC005872DF /* QuizMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA13C6E2691D6BC005872DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EA13C702691D6BC005872DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +103,6 @@
 		7EA13CD02691DEB0005872DF /* String+getAcronyms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+getAcronyms.swift"; sourceTree = "<group>"; };
 		7EA13CD32691DFF7005872DF /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		7EA13CD52691E0BC005872DF /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		7EA13CD72691E11A005872DF /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		7EA13CD92691E3E0005872DF /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		7EA13CDB2691E460005872DF /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		7EA13CDD2691F354005872DF /* CategoryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetail.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				7EA13C6E2691D6BC005872DF /* AppDelegate.swift */,
 				7EA13C702691D6BC005872DF /* SceneDelegate.swift */,
 				7EA13C742691D6BD005872DF /* Assets.xcassets */,
+				7E16E7CE2694F6CE0041272C /* Colours.xcassets */,
 				7EA13C792691D6BD005872DF /* LaunchScreen.storyboard */,
 				7EA13C7C2691D6BD005872DF /* Info.plist */,
 				7EA13CAE2691D7A2005872DF /* models */,
@@ -239,6 +242,7 @@
 			children = (
 				7EA13CCE2691DDA4005872DF /* PoppinsFont.swift */,
 				7EA13CE326922C28005872DF /* Alerts.swift */,
+				7E16E7482693133B0041272C /* NetworkMonitor.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -258,7 +262,6 @@
 			children = (
 				7EA13CD32691DFF7005872DF /* Question.swift */,
 				7EA13CD52691E0BC005872DF /* Category.swift */,
-				7EA13CD72691E11A005872DF /* Score.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				7EA13CCB2691DD32005872DF /* Poppins-ExtraBold.ttf in Resources */,
 				7EA13CC82691DD32005872DF /* Poppins-SemiBold.ttf in Resources */,
 				7EA13C752691D6BD005872DF /* Assets.xcassets in Resources */,
+				7E16E7CF2694F6CE0041272C /* Colours.xcassets in Resources */,
 				7EA13CC52691DD32005872DF /* Poppins-Medium.ttf in Resources */,
 				7EA13CCD2691DD32005872DF /* Poppins-ExtraLight.ttf in Resources */,
 			);
@@ -462,6 +466,7 @@
 				7EA13CD12691DEB0005872DF /* String+getAcronyms.swift in Sources */,
 				7EA13C712691D6BC005872DF /* SceneDelegate.swift in Sources */,
 				7EA13CD42691DFF7005872DF /* Question.swift in Sources */,
+				7E16E7492693133B0041272C /* NetworkMonitor.swift in Sources */,
 				7EA13CF326924D3F005872DF /* CategoryViewModel.swift in Sources */,
 				7EA13CE2269227B1005872DF /* String+htmlAttributedString.swift in Sources */,
 				7EA13CB22691D992005872DF /* CardView.swift in Sources */,
@@ -480,7 +485,6 @@
 				7EA13CF926925D09005872DF /* Menu.swift in Sources */,
 				7EA13CED26924CD1005872DF /* GameModeButton.swift in Sources */,
 				7EA13CEF26924D10005872DF /* AnswerCard.swift in Sources */,
-				7EA13CD82691E11A005872DF /* Score.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,10 +653,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"QuizMe/Preview Content\"";
 				DEVELOPMENT_TEAM = J7YW95EWWV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = QuizMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -660,7 +666,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.erringhambruce.QuizMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -670,10 +676,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"QuizMe/Preview Content\"";
 				DEVELOPMENT_TEAM = J7YW95EWWV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = QuizMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -681,7 +689,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.erringhambruce.QuizMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
